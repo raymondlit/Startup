@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>涧西区中小企业协会 - 服务企业，促进发展</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #4a86e8;
+            --primary-light: #6fa3ef;
+            --primary-dark: #3a6bc0;
+            --secondary-color: #f1f8ff;
+            --accent-color: #ff7e30;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --white: #ffffff;
+            --gray: #f5f7fa;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+
+        body {
+            background-color: var(--gray);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--primary-dark);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 头部样式 */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            color: var(--white);
+            padding: 1.5rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo i {
+            font-size: 2.5rem;
+            margin-right: 12px;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .logo p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav li {
+            margin-left: 1.5rem;
+        }
+
+        nav a {
+            color: var(--white);
+            font-weight: 500;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* 主要内容区样式 */
+        .hero {
+            background: linear-gradient(rgba(74, 134, 232, 0.9), rgba(74, 134, 232, 0.8)), url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--white);
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #ff6a13;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            color: var(--white);
+        }
+
+        .features {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-color);
+            margin: 12px auto;
+            border-radius: 2px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--box-shadow);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            background-color: var(--secondary-color);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: var(--primary-color);
+            font-size: 2rem;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-dark);
+        }
+
+        /* 内容区域样式 */
+        .content-section {
+            padding: 3rem 0;
+            background-color: var(--white);
+        }
+
+        .content-section:nth-child(even) {
+            background-color: var(--gray);
+        }
+
+        .tab-container {
+            margin-top: 2rem;
+        }
+
+        .tabs {
+            display: flex;
+            border-bottom: 2px solid var(--secondary-color);
+            margin-bottom: 1.5rem;
+            overflow-x: auto;
+        }
+
+        .tab {
+            padding: 12px 24px;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--text-light);
+            border-bottom: 3px solid transparent;
+            white-space: nowrap;
+        }
+
+        .tab.active {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--primary-color);
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .news-list, .policy-list, .training-list, .tool-list {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .news-item, .policy-item, .training-item, .tool-item {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .news-item h3, .policy-item h3, .training-item h3, .tool-item h3 {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .news-item h3 i, .policy-item h3 i, .training-item h3 i, .tool-item h3 i {
+            margin-right: 10px;
+            color: var(--primary-color);
+        }
+
+        .meta {
+            display: flex;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .meta span {
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .meta i {
+            margin-right: 5px;
+        }
+
+        /* 页脚样式 */
+        footer {
+            background-color: var(--text-dark);
+            color: var(--white);
+            padding: 3rem 0 1.5rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary-light);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            transition: all 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+            padding-left: 5px;
+        }
+
+        .contact-info {
+            list-style: none;
+        }
+
+        .contact-info li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .contact-info i {
+            margin-right: 10px;
+            color: var(--primary-light);
+            margin-top: 4px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid #444;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* 内容管理界面样式 */
+        .admin-panel {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+        }
+
+        .admin-btn {
+            background-color: var(--primary-color);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .admin-btn:hover {
+            background-color: var(--primary-dark);
+            transform: scale(1.1);
+        }
+
+        .admin-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1001;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .admin-modal.active {
+            display: flex;
+        }
+
+        .admin-content {
+            background-color: var(--white);
+            width: 90%;
+            max-width: 800px;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .admin-tabs {
+            display: flex;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .admin-tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .admin-tab.active {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .admin-form {
+            display: none;
+        }
+
+        .admin-form.active {
+            display: block;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-top: 1.5rem;
+        }
+
+        .btn-secondary {
+            background-color: #6c757d;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 992px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .logo {
+                margin-bottom: 1rem;
+            }
+            
+            nav ul {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            
+            nav li {
+                margin: 0 10px 10px;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+            
+            nav {
+                display: none;
+                width: 100%;
+                margin-top: 1rem;
+            }
+            
+            nav.active {
+                display: block;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav li {
+                margin: 5px 0;
+            }
+            
+            .hero {
+                padding: 3rem 0;
+            }
+            
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+            
+            .features, .content-section {
+                padding: 2rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部 -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-handshake"></i>
+                    <div class="logo-text">
+                        <h1>涧西区中小企业协会</h1>
+                        <p>服务企业，促进发展，合作共赢</p>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav>
+                    <ul>
+                        <li><a href="#home">首页</a></li>
+                        <li><a href="#news">最新消息</a></li>
+                        <li><a href="#policy">政策发布</a></li>
+                        <li><a href="#training">特色培训</a></li>
+                        <li><a href="#tools">企业工具</a></li>
+                        <li><a href="#about">关于协会</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主横幅 -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h2>助力中小企业成长与发展</h2>
+            <p>涧西区中小企业协会致力于为企业提供全方位服务，包括政策咨询、培训交流、资源对接等，促进企业协同发展，共创美好未来。</p>
+            <a href="#about" class="btn">了解更多</a>
+        </div>
+    </section>
+
+    <!-- 特色服务 -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">协会核心服务</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>政策解读</h3>
+                    <p>第一时间发布并解读最新政策，帮助企业把握政策红利，助力企业发展。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>专业培训</h3>
+                    <p>提供管理、技术、营销等多方面培训课程，提升企业核心竞争力。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>资源对接</h3>
+                    <p>搭建企业交流平台，促进产业链上下游合作，实现资源优化配置。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>企业工具</h3>
+                    <p>提供实用企业工具和模板，帮助企业规范管理，提高工作效率。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 最新消息 -->
+    <section class="content-section" id="news">
+        <div class="container">
+            <h2 class="section-title">最新消息</h2>
+            <div class="tab-container">
+                <div class="tabs">
+                    <div class="tab active" data-tab="news1">协会动态</div>
+                    <div class="tab" data-tab="news2">行业资讯</div>
+                    <div class="tab" data-tab="news3">通知公告</div>
+                </div>
+                <div class="tab-content active" id="news1">
+                    <div class="news-list">
+                        <div class="news-item">
+                            <h3><i class="fas fa-newspaper"></i> 协会成功举办2023年中小企业创新论坛</h3>
+                            <div class="meta">
+                                <span><i class="far fa-calendar"></i> 2023-10-15</span>
+                                <span><i class="far fa-eye"></i> 328</span>
+                            </div>
+                            <p>本次论坛邀请了行业专家和成功企业家分享创新经验，200余家企业代表参加，现场交流热烈。</p>
+                        </div>
+                        <div class="news-item">
+                            <h3><i class="fas fa-newspaper"></i> 涧西区中小企业协会会员代表大会顺利召开</h3>
+                            <div class="meta">
+                                <span><i class="far fa-calendar"></i> 2023-09-28</span>
+                                <span><i class="far fa-eye"></i> 195</span>
+                            </div>
+                            <p>大会审议通过了协会年度工作报告，选举产生了新一届理事会成员，规划了未来一年工作重点。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content" id="news2">
+                    <div class="news-list">
+                        <div class="news-item">
+                            <h3><i class="fas fa-newspaper"></i> 制造业数字化转型趋势分析</h3>
+                            <div class="meta">
+                                <span><i class="far fa-calendar"></i> 2023-11-05</span>
+                                <span><i class="far fa-eye"></i> 142</span>
+                            </div>
+                            <p>随着工业4.0时代的到来，制造业数字化转型已成为必然趋势，中小企业如何抓住机遇实现升级。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content" id="news3">
+                    <div class="news-list">
+                        <div class="news-item">
+                            <h3><i class="fas fa-newspaper"></i> 关于征集2024年度培训需求的通知</h3>
+                            <div class="meta">
+                                <span><i class="far fa-calendar"></i> 2023-11-10</span>
+                                <span><i class="far fa-eye"></i> 87</span>
+                            </div>
+                            <p>为更好地服务会员企业，现向各会员单位征集2024年度培训需求，请于11月30日前反馈。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 政策发布 -->
+    <section class="content-section" id="policy">
+        <div class="container">
+            <h2 class="section-title">政策发布</h2>
+            <div class="policy-list">
+                <div class="policy-item">
+                    <h3><i class="fas fa-file-alt"></i> 涧西区中小企业科技创新补贴政策实施细则</h3>
+                    <div class="meta">
+                        <span><i class="far fa-calendar"></i> 2023-11-12</span>
+                        <span><i class="fas fa-tags"></i> 科技创新</span>
+                    </div>
+                    <p>为鼓励中小企业科技创新，我区出台科技创新补贴政策，对符合条件的研发项目给予最高50万元资金支持。</p>
+                    <a href="#">查看详情</a>
+                </div>
+                <div class="policy-item">
+                    <h3><i class="fas fa-file-alt"></i> 关于进一步支持小微企业融资的若干措施</h3>
+                    <div class="meta">
+                        <span><i class="far fa-calendar"></i> 2023-10-30</span>
+                        <span><i class="fas fa-tags"></i> 金融支持</span>
+                    </div>
+                    <p>为解决小微企业融资难题，多部门联合出台措施，扩大信贷投放，降低融资成本，优化金融服务。</p>
+                    <a href="#">查看详情</a>
+                </div>
+                <div class="policy-item">
+                    <h3><i class="fas fa-file-alt"></i> 中小企业数字化转型指南</h3>
+                    <div class="meta">
+                        <span><i class="far fa-calendar"></i> 2023-10-18</span>
+                        <span><i class="fas fa-tags"></i> 数字化转型</span>
+                    </div>
+                    <p>为指导中小企业顺利推进数字化转型，特制定本指南，涵盖转型路径、技术选型、实施步骤等内容。</p>
+                    <a href="#">查看详情</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 特色培训 -->
+    <section class="content-section" id="training">
+        <div class="container">
+            <h2 class="section-title">特色培训</h2>
+            <div class="training-list">
+                <div class="training-item">
+                    <h3><i class="fas fa-graduation-cap"></i> 中小企业财务管理实战培训班</h3>
+                    <div class="meta">
+                        <span><i class="far fa-calendar"></i> 2023-11-25 09:00 - 17:00</span>
+                        <span><i class="fas fa-map-marker-alt"></i> 协会培训中心</span>
+                    </div>
+                    <p>系统讲解中小企业财务管理要点，包括成本控制、现金流管理、税务筹划等实用内容。</p>
+                    <a href="#" class="btn">立即报名</a>
+                </div>
+                <div class="training-item">
+                    <h3><i class="fas fa-graduation-cap"></i> 数字化转型实战工作坊</h3>
+                    <div class="meta">
+                        <span><i class="far fa-calendar"></i> 2023-12-05 13:30 - 16:30</span>
+                        <span><i class="fas fa-map-marker-alt"></i> 线上直播</span>
+                    </div>
+                    <p>针对中小企业数字化转型中的实际问题，通过案例分析和实操演练，帮助企业制定转型方案。</p>
+                    <a href="#" class="btn">立即报名</a>
+                </div>
+                <div class="training-item">
+                    <h3><i class="fas fa-graduation-cap"></i> 市场营销新策略研讨会</h3>
+                    <div class="meta">
+                        <span><i class="far fa-calendar"></i> 2023-12-12 09:00 - 12:00</span>
+                        <span><i class="fas fa-map-marker-alt"></i> 协会会议室</span>
+                    </div>
+                    <p>探讨新媒体环境下中小企业市场营销新策略，分享成功案例，提升企业市场竞争力。</p>
+                    <a href="#" class="btn">立即报名</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 企业工具 -->
+    <section class="content-section" id="tools">
+        <div class="container">
+            <h2 class="section-title">企业工具</h2>
+            <div class="tool-list">
+                <div class="tool-item">
+                    <h3><i class="fas fa-calculator"></i> 中小企业贷款计算器</h3>
+                    <p>帮助中小企业计算不同贷款方案的月供、总利息等，辅助企业做出融资决策。</p>
+                    <a href="#" class="btn">使用工具</a>
+                </div>
+                <div class="tool-item">
+                    <h3><i class="fas fa-file-contract"></i> 标准合同模板下载</h3>
+                    <p>提供劳动合同、采购合同、销售合同等常用合同模板，帮助企业规范合同管理。</p>
+                    <a href="#" class="btn">下载模板</a>
+                </div>
+                <div class="tool-item">
+                    <h3><i class="fas fa-chart-line"></i> 企业经营状况自评工具</h3>
+                    <p>通过简单问卷，帮助企业评估经营状况，发现潜在问题，获取改进建议。</p>
+                    <a href="#" class="btn">开始评估</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于协会 -->
+    <section class="content-section" id="about">
+        <div class="container">
+            <h2 class="section-title">关于协会</h2>
+            <div class="about-content">
+                <div class="feature-card">
+                    <h3>协会简介</h3>
+                    <p>涧西区中小企业协会成立于2010年，是由涧西区中小企业自愿组成的非营利性社会团体。协会秉承"服务企业、促进发展、合作共赢"的宗旨，为会员企业提供政策咨询、培训交流、资源对接等服务。</p>
+                    <p>目前协会拥有会员企业300余家，涵盖制造业、服务业、科技创新等多个领域，已成为涧西区中小企业发展的重要支撑平台。</p>
+                </div>
+                <div class="feature-card">
+                    <h3>联系我们</h3>
+                    <div class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>河南省洛阳市涧西区中州西路123号创业大厦A座5楼</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>0379-12345678</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>contact@jxq-sme.org</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>周一至周五 8:30-12:00, 14:00-17:30</span>
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>快速链接</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">首页</a></li>
+                        <li><a href="#news">最新消息</a></li>
+                        <li><a href="#policy">政策发布</a></li>
+                        <li><a href="#training">特色培训</a></li>
+                        <li><a href="#tools">企业工具</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>会员服务</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">入会申请</a></li>
+                        <li><a href="#">会员权益</a></li>
+                        <li><a href="#">活动报名</a></li>
+                        <li><a href="#">资源下载</a></li>
+                        <li><a href="#">需求反馈</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>联系我们</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>洛阳市涧西区中州西路123号创业大厦A座5楼</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>0379-12345678</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>contact@jxq-sme.org</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>关注我们</h3>
+                    <p>扫描二维码关注微信公众号，获取最新政策资讯和活动信息</p>
+                    <div style="background: #fff; width: 120px; height: 120px; margin-top: 10px; display: flex; align-items: center; justify-content: center;">
+                        [公众号二维码]
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2023 涧西区中小企业协会 版权所有 | 豫ICP备12345678号</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 内容管理面板 -->
+    <div class="admin-panel">
+        <div class="admin-btn" id="adminToggle">
+            <i class="fas fa-cog"></i>
+        </div>
+    </div>
+
+    <div class="admin-modal" id="adminModal">
+        <div class="admin-content">
+            <h2>内容管理</h2>
+            <div class="admin-tabs">
+                <div class="admin-tab active" data-form="news-form">最新消息</div>
+                <div class="admin-tab" data-form="policy-form">政策发布</div>
+                <div class="admin-tab" data-form="training-form">培训信息</div>
+                <div class="admin-tab" data-form="tool-form">企业工具</div>
+            </div>
+            
+            <div class="admin-form active" id="news-form">
+                <div class="form-group">
+                    <label for="news-title">标题</label>
+                    <input type="text" id="news-title" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="news-category">分类</label>
+                    <select id="news-category" class="form-control">
+                        <option value="协会动态">协会动态</option>
+                        <option value="行业资讯">行业资讯</option>
+                        <option value="通知公告">通知公告</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="news-content">内容</label>
+                    <textarea id="news-content" class="form-control"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button class="btn-secondary" id="cancel-news">取消</button>
+                    <button class="btn-primary" id="save-news">保存</button>
+                </div>
+            </div>
+            
+            <div class="admin-form" id="policy-form">
+                <div class="form-group">
+                    <label for="policy-title">政策标题</label>
+                    <input type="text" id="policy-title" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="policy-category">政策分类</label>
+                    <input type="text" id="policy-category" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="policy-content">政策内容</label>
+                    <textarea id="policy-content" class="form-control"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button class="btn-secondary" id="cancel-policy">取消</button>
+                    <button class="btn-primary" id="save-policy">保存</button>
+                </div>
+            </div>
+            
+            <div class="admin-form" id="training-form">
+                <div class="form-group">
+                    <label for="training-title">培训标题</label>
+                    <input type="text" id="training-title" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="training-time">培训时间</label>
+                    <input type="text" id="training-time" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="training-location">培训地点</label>
+                    <input type="text" id="training-location" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="training-content">培训内容</label>
+                    <textarea id="training-content" class="form-control"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button class="btn-secondary" id="cancel-training">取消</button>
+                    <button class="btn-primary" id="save-training">保存</button>
+                </div>
+            </div>
+            
+            <div class="admin-form" id="tool-form">
+                <div class="form-group">
+                    <label for="tool-title">工具名称</label>
+                    <input type="text" id="tool-title" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="tool-description">工具描述</label>
+                    <textarea id="tool-description" class="form-control"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button class="btn-secondary" id="cancel-tool">取消</button>
+                    <button class="btn-primary" id="save-tool">保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 移动端菜单切换
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('active');
+        });
+        
+        // 标签页切换
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                // 移除所有active类
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                
+                // 添加active类到当前标签
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.tab).classList.add('active');
+            });
+        });
+        
+        // 管理面板切换
+        const adminToggle = document.getElementById('adminToggle');
+        const adminModal = document.getElementById('adminModal');
+        
+        adminToggle.addEventListener('click', () => {
+            adminModal.classList.add('active');
+        });
+        
+        // 关闭管理模态框
+        document.querySelectorAll('.btn-secondary').forEach(btn => {
+            btn.addEventListener('click', () => {
+                adminModal.classList.remove('active');
+            });
+        });
+        
+        // 管理标签切换
+        document.querySelectorAll('.admin-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                // 移除所有active类
+                document.querySelectorAll('.admin-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.admin-form').forEach(f => f.classList.remove('active'));
+                
+                // 添加active类到当前标签
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.form).classList.add('active');
+            });
+        });
+        
+        // 保存内容功能
+        document.getElementById('save-news').addEventListener('click', function() {
+            const title = document.getElementById('news-title').value;
+            const category = document.getElementById('news-category').value;
+            const content = document.getElementById('news-content').value;
+            
+            if(title && content) {
+                alert('最新消息已保存！在实际应用中，这里会将内容保存到数据库或本地存储。');
+                // 实际应用中这里应该将数据保存到localStorage或发送到服务器
+                adminModal.classList.remove('active');
+            } else {
+                alert('请填写完整信息！');
+            }
+        });
+        
+        // 其他保存功能类似，可以根据需要添加
+        
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // 移动端点击后关闭菜单
+                    if(window.innerWidth <= 768) {
+                        document.querySelector('nav').classList.remove('active');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
